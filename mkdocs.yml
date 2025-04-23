@@ -30,16 +30,8 @@ nav:
           - Containerd Setup: install/common/install-containerd.md
           - Repositories: install/common/add-repositories.md
           - Kubernetes Tools: install/common/install-kube-tools.md
-      - With kubeadm:
-          - Overview: install/kubeadm/overview.md
-          - Generate Config: install/kubeadm/generate-config.md
-          - Init Control Plane: install/kubeadm/init-control-plane.md
-          - Join Worker: install/kubeadm/join-worker.md
-      - Airgapped:
-          - Overview: install/airgap/overview.md
-          - Manual Image Import: install/airgap/manual-image-import.md
-      - MicroK8s:
-          - Overview: install/microk8s/overview.md
-          - Single Node Setup: install/microk8s/single-node.md
+      - With kubeadm: install/kubeadm/index.md
+      - Airgapped: install/airgap/index.md
+      - MicroK8s: install/microk8s/index.md
       - Troubleshooting:
           - kubeadm Issues: install/troubleshooting/kubeadm-issues.md
