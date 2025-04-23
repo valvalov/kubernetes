@@ -25,9 +25,8 @@ theme:
 nav:
   - Home: index.md
   - Install:
-      - Common: install/common/index.md
+      - Common Installation Steps: install/common/index.md
       - With kubeadm: install/kubeadm/index.md
       - Airgapped: install/airgap/index.md
       - MicroK8s: install/microk8s/index.md
-      - Troubleshooting:
-      - kubeadm Issues: install/troubleshooting/index.md
+      - Troubleshooting: install/troubleshooting/index.md
