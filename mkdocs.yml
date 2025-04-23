@@ -1,0 +1,23 @@
+site_name: Kubernetes Educational Guide
+site_description: A structured educational resource on Kubernetes operations and deployment.
+site_author: valvalov
+repo_url: https://github.com/valvalov/kubernetes
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - search.highlight
+    - search.suggest
+    - toc.integrate
+nav:
+  - Home: index.md
+  - Install:
+      - Prerequisites: install/prerequisites.md
+      - Install Containerd: install/install-containerd.md
+      - Add Repositories: install/add-repositories.md
+      - Install Kubernetes Tools: install/install-kube-tools.md
+      - Generate Config: install/generate-config.md
+      - Init Control Plane: install/init-control-plane.md
+      - Join Worker: install/join-worker.md
