@@ -1,23 +1,45 @@
-site_name: Kubernetes Educational Guide
-site_description: A structured educational resource on Kubernetes operations and deployment.
+site_name: Kubernetes
+site_description: Structured educational documentation and cluster operations
 site_author: valvalov
 repo_url: https://github.com/valvalov/kubernetes
+edit_uri: edit/main/docs/
+
 theme:
   name: material
-  language: en
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: blue
+      accent: indigo
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue
+      accent: indigo
   features:
     - navigation.tabs
     - navigation.sections
+    - toc.integrate
     - search.highlight
     - search.suggest
-    - toc.integrate
+
 nav:
   - Home: index.md
   - Install:
-      - Prerequisites: install/prerequisites.md
-      - Install Containerd: install/install-containerd.md
-      - Add Repositories: install/add-repositories.md
-      - Install Kubernetes Tools: install/install-kube-tools.md
-      - Generate Config: install/generate-config.md
-      - Init Control Plane: install/init-control-plane.md
-      - Join Worker: install/join-worker.md
+      - Common:
+          - Prerequisites: install/common/prerequisites.md
+          - Containerd Setup: install/common/install-containerd.md
+          - Repositories: install/common/add-repositories.md
+          - Kubernetes Tools: install/common/install-kube-tools.md
+      - With kubeadm:
+          - Overview: install/kubeadm/overview.md
+          - Generate Config: install/kubeadm/generate-config.md
+          - Init Control Plane: install/kubeadm/init-control-plane.md
+          - Join Worker: install/kubeadm/join-worker.md
+      - Airgapped:
+          - Overview: install/airgap/overview.md
+          - Manual Image Import: install/airgap/manual-image-import.md
+      - MicroK8s:
+          - Overview: install/microk8s/overview.md
+          - Single Node Setup: install/microk8s/single-node.md
+      - Troubleshooting:
+          - kubeadm Issues: install/troubleshooting/kubeadm-issues.md
