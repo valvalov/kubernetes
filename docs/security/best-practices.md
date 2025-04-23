@@ -1,0 +1,3 @@
+# Best Practices
+
+Placeholder content.
