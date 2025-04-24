@@ -4,23 +4,39 @@ site_author: valvalov
 repo_url: https://github.com/valvalov/kubernetes
 edit_uri: edit/main/docs/
 
+# Configuration
 theme:
   name: material
-  palette:
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
-      primary: blue
-      accent: indigo
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
-      primary: blue
-      accent: indigo
+  custom_dir: material/overrides
   features:
-    - navigation.tabs
+    - announce.dismiss
+    - content.action.edit
+    - content.action.view
+    - content.code.annotate
+    - content.code.copy
+    # - content.code.select
+    # - content.footnote.tooltips
+    # - content.tabs.link
+    - content.tooltips
+    # - header.autohide
+    # - navigation.expand
+    - navigation.footer
+    - navigation.indexes
+    # - navigation.instant
+    # - navigation.instant.prefetch
+    # - navigation.instant.progress
+    # - navigation.prune
     - navigation.sections
-    - toc.integrate
+    - navigation.tabs
+    # - navigation.tabs.sticky
+    - navigation.top
+    - navigation.tracking
     - search.highlight
+    - search.share
     - search.suggest
+    - toc.follow
+    # - toc.integrate
+
 
 nav:
   - Home: index.md
