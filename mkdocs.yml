@@ -25,12 +25,7 @@ theme:
 nav:
   - Home: index.md
   - Install:
-      - Common: install/common/index.md
-      - Common Steps:
-          - Prerequisites: install/common/prerequisites.md
-          - Containerd Setup: install/common/install-containerd.md
-          - Repositories: install/common/add-repositories.md
-          - Kubernetes Tools: install/common/install-kube-tools.md
+      - Common Installation Steps: install/common/index.md
       - With kubeadm: install/kubeadm/index.md
       - Airgapped: install/airgap/index.md
       - MicroK8s: install/microk8s/index.md
