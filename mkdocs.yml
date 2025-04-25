@@ -54,7 +54,7 @@ theme:
     code: Roboto Mono
   favicon: assets/favicon.png
   icon:
-    logo: logo
+    logo: fontawesome/solid/k8s
 
 nav:
   - Home: index.md
