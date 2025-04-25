@@ -36,25 +36,19 @@ theme:
     - search.suggest
     - toc.follow
     # - toc.integrate
-  palette:
-    - media: "(prefers-color-scheme: no-preference)"
+  palette: 
+
+    # Palette toggle for light mode
+    - scheme: default
       toggle:
-        icon: material/toggle-switch-light
+          icon: material/brightness-7 
+          name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
         name: Switch to light mode
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
-      primary: indigo
-      accent: indigo
-      toggle:
-        icon: material/toggle-switch
-        name: Switch to dark mode
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
-      primary: black
-      accent: indigo
-      toggle:
-        icon: material/toggle-switch-off
-        name: Switch to system preference
   font:
     text: Roboto
     code: Roboto Mono
