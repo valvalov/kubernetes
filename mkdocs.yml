@@ -116,7 +116,7 @@ nav:
       - Common Installation Steps: 
         - install/common/prerequisites.md
         - install/common/install-containerd.md
-        - install/common/add-repositories.md
+  #     - install/common/add-repositories.md
         - install/common/install-kube-tools.md
   #      - With kubeadm: install/kubeadm/index.md
       - Airgapped Installations:
