@@ -89,7 +89,7 @@ kubeadm token create --print-join-command
 Example usage:
 
 ```bash
-sudo kubeadm join 192.168.1.38:6443 --token abcdef.0123456789abcdef \
+sudo kubeadm join 192.168.1.37:6443 --token abcdef.0123456789abcdef \
     --discovery-token-ca-cert-hash sha256:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 ```
 
