@@ -110,9 +110,13 @@ markdown_extensions:
 
 nav:
   - Home: index.md
-  - Install:
-      - Common Installation Steps: install/common/index.md
-      - With kubeadm: install/kubeadm/index.md
-      - Airgapped: install/airgap/index.md
-      - MicroK8s: install/microk8s/index.md
-      - Troubleshooting: install/troubleshooting/index.md
+  - Getting Started:  
+    - Install:
+      - install/index.md
+  #      - Common Installation Steps: install/common/index.md
+  #      - With kubeadm: install/kubeadm/index.md
+      - Airgapped Installations:
+        - install/airgap/manual-image-import.md
+        - install/airgap/registry.md
+  #      - MicroK8s: install/microk8s/index.md
+  #      - Troubleshooting: install/troubleshooting/index.md
