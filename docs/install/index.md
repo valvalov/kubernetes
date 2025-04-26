@@ -1,3 +1,3 @@
-# ndex
+# index
 
 Placeholder content.

@@ -8,11 +8,10 @@ This guide walks you through initializing the Kubernetes control plane and joini
 
 ## Generate kubeadm config
 
-```bash
-kubeadm config print init-defaults
-```
+!!! note "Note"
+    You can generate a default configuration file using `kubeadm config print init-defaults` and use it as a template.
 
-Then create a file `kubeadm-config.yaml` with your configuration.
+Create a file `kubeadm-config.yaml` with your configuration.
 Example:
 
 ```yaml
@@ -48,9 +47,6 @@ Initialize your Kubernetes master node:
 ```bash
 sudo kubeadm init --config=kubeadm-config.yaml
 ```
-
-!!! note "Note"
-    You can generate a default configuration file using `kubeadm config print init-defaults`.
 
 ---
 
