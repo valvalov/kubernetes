@@ -9,7 +9,7 @@ EOF
 sudo sysctl --system
 ```
 
-Verify with:
+Verify:
 
 ```bash
 sudo sysctl net.bridge.bridge-nf-call-iptables
