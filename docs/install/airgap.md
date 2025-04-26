@@ -1,3 +1,0 @@
-# Airgap
-
-Placeholder content.

@@ -1,3 +1,0 @@
-# Multi Node
-
-Placeholder content.
