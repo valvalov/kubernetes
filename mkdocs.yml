@@ -116,6 +116,8 @@ nav:
       - Common Installation Steps: 
         - install/common/prerequisites.md
         - install/common/install-kube-tools.md
+      - Cluster Setup:
+        - install/kubeadm/k8s.md 
       - Airgapped Installations:
         - install/airgap/manual-image-import.md
         - install/airgap/registry.md
