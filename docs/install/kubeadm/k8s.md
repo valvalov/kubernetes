@@ -48,6 +48,12 @@ Initialize your Kubernetes master node:
 sudo kubeadm init --config=kubeadm-config.yaml
 ```
 
+!!! warning "Warning"
+    Only run `kubeadm init` on the intended **control plane node**.  
+    Ensure that `kubeadm-config.yaml` is properly configured.  
+    Incorrect configuration may cause the cluster to fail initialization or behave unexpectedly.
+
+
 ---
 
 ## Configure kubectl Access
@@ -92,6 +98,11 @@ Example usage:
 sudo kubeadm join 192.168.1.37:6443 --token abcdef.0123456789abcdef \
     --discovery-token-ca-cert-hash sha256:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 ```
+
+!!! warning "Warning"
+    Run this `kubeadm join` command **on each worker node**, not on the control plane (master) node. 
+    This command will connect the worker to your Kubernetes cluster.
+
 
 !!! note "Note"
     The `--token` and `--discovery-token-ca-cert-hash` ensure that worker nodes securely join the cluster.
