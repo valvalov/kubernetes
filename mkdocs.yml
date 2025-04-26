@@ -1,4 +1,4 @@
-site_name: Kubernetes
+site_name: Kubernetes Notes
 site_description: Structured educational documentation and cluster operations
 site_author: valvalov
 repo_url: https://github.com/valvalov/kubernetes
@@ -36,16 +36,18 @@ theme:
     - search.suggest
     - toc.follow
     # - toc.integrate
-  palette: 
+  palette:
 
     # Palette toggle for light mode
-    - scheme: default
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
       toggle:
-          icon: material/brightness-7 
-          name: Switch to dark mode
+        icon: material/brightness-7
+        name: Switch to dark mode
 
     # Palette toggle for dark mode
-    - scheme: slate
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
