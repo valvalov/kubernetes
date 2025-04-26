@@ -8,6 +8,16 @@ These components are essential for managing and operating your Kubernetes cluste
 
 ---
 
+## Check Latest Kubernetes Release
+
+It is recommended to check the latest available Kubernetes release before installing the packages.
+
+```bash
+curl -L -s https://dl.k8s.io/release/stable.txt
+```
+
+---
+
 ## Add Kubernetes Package Repository
 
 First, add the official Kubernetes APT repository to your system.
