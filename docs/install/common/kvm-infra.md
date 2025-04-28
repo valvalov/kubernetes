@@ -1,16 +1,62 @@
-# KVM Infrastructure
+# Ubuntu Cloud-Init Setup with KVM
 
-## Ubuntu cloud-init
+## Overview
+
+This guide describes how to automatically deploy Ubuntu cloud images on a KVM hypervisor using cloud-init and a simple script.
+
+---
+
+## Requirements
+
+- A Linux host with:
+- KVM / QEMU installed:
+`virt-install`, `genisoimage`, `cloud-utils`
+- A configured user with sudo privileges
+- Automatic NTP time synchronization
+- DHCP network setup
+- Ubuntu Cloud Image (cloud-init enabled)
+
+Install the required packages:
+
+```bash
+sudo apt install qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils virt-manager genisoimage cloud-utils
+```
+
+or for Fedora:
+
+```bash
+sudo dnf install qemu-kvm libvirt virt-install genisoimage cloud-utils-growpart
+```
+
+---
+
+## Download Ubuntu Cloud Image
+
+Download the cloud image for your desired Ubuntu version:
+
+```bash
+wget https://cloud-images.ubuntu.com/plucky/current/plucky-server-cloudimg-amd64.img -O ubuntu-cloud.img
+```
+
+(Replace "plucky" with "focal", "noble" etc. if needed.)
+
+---
+
+## Deploy the VMs
+
+Create script `install_vm.sh`
+
+---
 
 ```bash
 #!/bin/bash
-
+# install_vm.sh
 # === Configuration Parsing ===
 function parse_arguments() {
   VM_PREFIX="$1"
   VM_COUNT="$2"
-  NETWORK_MODE="$3"                                                   # direct, network, bridge
-  NETWORK_SOURCE="$4"                                                 # eno1, lo, <bridge name>
+  NETWORK_MODE="$3"    # direct, network, bridge
+  NETWORK_SOURCE="$4"  # eno1, lo, <bridge name>
 
   VM_MEMORY="3072"
   VM_VCPUS="2"
