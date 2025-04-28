@@ -113,7 +113,8 @@ nav:
   - Getting Started:  
     - Install:
       - install/index.md
-      - Common Installation Steps: 
+      - Common Installation Steps:
+        - install/common/kvm-infra.md
         - install/common/prerequisites.md
         - install/common/install-kube-tools.md
       - Cluster Setup:
