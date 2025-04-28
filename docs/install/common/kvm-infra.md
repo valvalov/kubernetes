@@ -50,7 +50,26 @@ Create script `install_vm.sh`
 
 ```bash
 #!/bin/bash
-# install_vm.sh
+# install_vm.sh - Automated Cloud-Init Ubuntu VM creation script for KVM
+#
+# Usage:
+#   sudo /home/user/install_vm.sh <vm-prefix> <count> <network-mode> <network-source>
+#
+# Example:
+#   sudo /home/user/install_vm.sh vm 2 direct eno1
+#   Will create two VMs (vm1 and vm2) directly connected to KVM interface eno1
+#
+# Parameters:
+#   <vm-prefix>       Prefix for VM names (e.g., 'vm' -> vm1, vm2, ...)
+#   <count>           Number of VMs to create
+#   <network-mode>    Network connection type: 'direct', 'bridge', or 'network'
+#   <network-source>  Network source interface or bridge name (e.g., eno1, br0, default)
+#
+# Notes:
+#   - Requires KVM, libvirt, virt-install, and cloud-init to be installed
+#   - Must be run with sudo/root privileges
+#   - Backing image must exist at configured location
+#
 # === Configuration Parsing ===
 function parse_arguments() {
   VM_PREFIX="$1"
