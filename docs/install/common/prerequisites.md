@@ -46,9 +46,8 @@ sudo apt upgrade -y
 
 ## Install containerd
 
-`containerd` is a core container runtime used by Kubernetes for managing container lifecycle operations. 
+`containerd` is a core container runtime used by Kubernetes for managing container lifecycle operations.
 Installing and configuring containerd correctly is crucial for setting up a stable Kubernetes environment.
-
 
 Install containerd using your system package manager.
 
@@ -95,7 +94,7 @@ sudo systemctl enable containerd
 
 ## Conclusion
 
-You have now installed and configured containerd successfully! 
+You have now installed and configured containerd successfully!
 This runtime will act as the foundation for Kubernetes to manage and schedule containers across your cluster.
 
 Proceed to install Kubernetes components like `kubeadm`, `kubelet`, and `kubectl` in the next steps.

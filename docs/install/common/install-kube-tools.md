@@ -3,7 +3,7 @@
 
 ## Introduction
 
-In this section, you will install the core Kubernetes tools: `kubeadm`, `kubelet`, and `kubectl`. 
+In this section, you will install the core Kubernetes tools: `kubeadm`, `kubelet`, and `kubectl`.
 These components are essential for managing and operating your Kubernetes cluster effectively.
 
 ---
@@ -40,7 +40,7 @@ First, add the official Kubernetes APT repository to your system.
     echo "deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.33/deb/ /" | sudo tee /etc/apt/sources.list.d/kubernetes.list
     sudo apt update
     ```
-	
+
 !!! note "Note"
     Make sure `/etc/apt/keyrings/` exists before saving the GPG key.
 
@@ -80,5 +80,5 @@ sudo systemctl enable kubelet
 
 ## Conclusion
 
-You now have the essential Kubernetes tools installed and configured. 
+You now have the essential Kubernetes tools installed and configured.
 The next step is to initialize your Kubernetes control plane using `kubeadm init`.
