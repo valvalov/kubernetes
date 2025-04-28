@@ -12,8 +12,8 @@ This guide describes how to automatically deploy Ubuntu cloud images on a KVM hy
 - KVM / QEMU installed:
 `virt-install`, `genisoimage`, `cloud-utils`
 - A configured user with sudo privileges
-- Automatic NTP time synchronization
 - DHCP network setup
+- Automatic NTP time synchronization
 - Ubuntu Cloud Image (cloud-init enabled)
 
 Install the required packages:
@@ -65,7 +65,7 @@ function parse_arguments() {
   IMAGES_DIR="/var/lib/libvirt/images"
   CSV_REPORT="/tmp/vm_creation_report.csv"
   SSH_PUBLIC_KEY="$HOME/.ssh/id_ed25519.pub"
-  OS_VARIANT="ubuntu25.04"                                             # virt-install --osinfo list
+  OS_VARIANT="ubuntu25.04"    # virt-install --osinfo list
 
   # Checking if we are root
   if [ "$EUID" -ne 0 ]; then
