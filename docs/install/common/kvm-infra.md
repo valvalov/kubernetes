@@ -219,3 +219,49 @@ function main() {
 main "$@"
 
 ```
+
+---
+
+!!! note "Note"
+    **1. How to generate a secure encrypted password for cloud-init:**
+    
+    Run the following command to generate a SHA-512 (recommended) password hash:
+    
+    ```bash
+    openssl passwd -6
+    ```
+    
+    Example output:
+    ```
+    $6$Tg8r0q2XibH8O$yImySK8p2iC2R5L/KHKoXtfClh5UzQGkvz6YtD63At4V3BhUEH7uZ8fwS4vzw5dhB4Z53slYh7eUl6B2yRcE6/
+    ```
+    
+    When inserting the password into a cloud-init `user-data` YAML file, **you must escape** every `$` symbol with a backslash (`\`) if you are inserting it through Bash scripts:
+    
+    ```yaml
+    chpasswd:
+      list: |
+        ubuntu:\$6\$Tg8r0q2XibH8O\$yImySK8p2iC2R5L/...
+      expire: false
+      encrypt: false
+    ``` 
+    
+    **2. How to generate an SSH Ed25519 key pair:**
+    
+    To create a modern and secure SSH key pair, run:
+    
+    ```bash
+    ssh-keygen -t ed25519 -C "your_email@example.com"
+    ```
+    
+    - Save the key files in the default location (`~/.ssh/id_ed25519`).
+    - Public key is located at: `~/.ssh/id_ed25519.pub`
+    
+    Use the public key content in your `cloud-init` under `ssh_authorized_keys`:
+    
+    ```yaml
+    ssh_authorized_keys:
+      - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIB... your_email@example.com
+    ```
+
+---
