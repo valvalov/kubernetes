@@ -1,1 +1,32 @@
+# MkDocs build artifacts
 site/
+.cache/
+
+# Python virtual environments
+venv/
+.venv/
+env/
+.env/
+
+# Python bytecode
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Editor config (optional, if you use VSCode or similar)
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# System files (optional safety)
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
+
+# mkdocs configuration backup
+mkdocs.yml.backup
+
